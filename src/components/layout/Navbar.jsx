@@ -4,10 +4,10 @@ import ShinyText from "../reactbits/ShinyText";
 
 export default function Navbar() {
    return (
-      <header className="fixed w-11/12 max-w-7xl top-6 inset-x-0 mx-auto z-50">
+      <header className="fixed w-11/12 max-w-7xl top-5 inset-x-0 mx-auto z-50">
          <section className="flex justify-between items-center py-4 px-8 rounded-2xl glassmorphism border-blue-bright">
             <a href="/">
-               <ShinyText text="Cristian G." color="#0EA5E9" className="text-4xl font-bold" />
+               <ShinyText text="Cristian G." className="text-4xl font-bold" />
             </a>
             <nav>
                <ul className="flex gap-12">

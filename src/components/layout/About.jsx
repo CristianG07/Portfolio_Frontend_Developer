@@ -1,5 +1,37 @@
+import { Icon } from "@iconify-icon/react";
+import Title from "../ui/Title";
+import { coding } from "../../assets";
+import ShinyText from "../reactbits/ShinyText";
+import Button from "../ui/Button";
+import TextIcons from "../ui/TextIcons";
+import { AboutSkills } from "../../data";
+
 export default function About() {
    return (
-      <section>About</section>
+      <section className="w-4/5 max-w-7xl mx-auto py-24" id="about">
+         <div className="flex flex-col items-center gap-1 text-center mb-20">
+            <Title text="About Me" />
+         </div>
+         <div className="grid grid-cols-2 gap-10">
+            <figure className="border border-blue-bright rounded-2xl shadow shadow-blue-bright overflow-hidden">
+               <img src={coding} alt="About Image" className="h-full object-cover" />
+            </figure>
+            <div className="space-y-4">
+               <h3 className="text-3xl font-semibold"><ShinyText text="Crafting modern digital experiences with React and Tailwind CSS." color="#b5b5b5" /></h3>
+               <p className="text-gray-500">
+                  I'm Cristian Gonzalez, a Frontend Developer specializing in React, Tailwind CSS, and JavaScript.
+                  I build responsive, modern, and user-friendly websites, transforming Figma designs into clean and production-ready web experiences for desktop, tablet, and mobile devices.
+               </p>
+               <div className="flex flex-wrap gap-x-6 gap-y-2.5 items-center text-nowrap">
+                  {AboutSkills.map((skill) => (
+                     <TextIcons key={skill.id} icon={skill.icon} text={skill.text} classNameContent="" />
+                  ))}
+               </div>
+               <div>
+                  <Button href="../../assets/image/coding.png" className="w-fit" download={true} >Download CV <Icon icon="line-md:download" className="text-xl" /></Button>
+               </div>
+            </div>
+         </div>
+      </section>
    )
 }
