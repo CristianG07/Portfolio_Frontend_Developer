@@ -7,7 +7,8 @@
   --color-blue-bright: #0EA5E9;
   --color-blue-electric: #60A5FA;
   --color-text-secondary: #94A3B8;
-  --color-card: rgba(255, 255, 255, 0.0);
+  --color-card: #0A0F1C05;
+  --radius-card: 10px;
 }
 
 @layer base {
@@ -36,10 +37,14 @@
 @layer utilities {
 
   .glassmorphism {
-    @apply bg-card border backdrop-blur-sm;
+    @apply border backdrop-blur-sm;
   }
 
   .gradiant_text {
     @apply bg-linear-to-r from-blue-neon via-blue-electric to-blue-bright bg-clip-text text-transparent;
+  }
+
+  .content_section {
+    @apply max-w-7xl mx-auto pt-24 mb-20
   }
 }

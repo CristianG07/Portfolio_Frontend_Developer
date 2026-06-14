@@ -1,19 +1,22 @@
 import { Icon } from "@iconify-icon/react";
+// image
+import { coding } from "../../assets/image";
+// data
+import { AboutSkills } from "../../data";
+// components
 import Title from "../ui/Title";
-import { coding } from "../../assets";
 import ShinyText from "../reactbits/ShinyText";
 import Button from "../ui/Button";
 import TextIcons from "../ui/TextIcons";
-import { AboutSkills } from "../../data";
 
 export default function About() {
    return (
-      <section className="w-4/5 max-w-7xl mx-auto py-24" id="about">
+      <section className="w-4/5 content_section" id="about">
          <div className="flex flex-col items-center gap-1 text-center mb-20">
             <Title text="About Me" />
          </div>
          <div className="grid grid-cols-2 gap-10">
-            <figure className="border border-blue-bright rounded-2xl shadow shadow-blue-bright overflow-hidden">
+            <figure className="border border-blue-bright rounded-card shadow shadow-blue-bright overflow-hidden">
                <img src={coding} alt="About Image" className="h-full object-cover" />
             </figure>
             <div className="space-y-4">

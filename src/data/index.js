@@ -1,3 +1,6 @@
+// projects images
+import { p1, p10, p2, p3, p4, p5, p6, p7, p8, p9 } from "../assets/projects";
+
 export const Navlinks = [
    { id: 1, name: 'Home', href: '#home' },
    { id: 2, name: 'About', href: '#about' },
@@ -23,9 +26,17 @@ export const AboutSkills = [
 
 export const ServicesInfo = [
    { id: 1, title: "Frontend Development", icon: "streamline-plump:browser-code-1", description: "Building modern, responsive, and high-performance web interfaces using React and Tailwind CSS." },
-   { id: 2, title: "Responsive Design", icon: "qlementine-icons:computer-16", description: "Creating websites optimized for desktop, tablet, and mobile for the best user experience." },
-   { id: 3, title: "Landing Page Development", icon: "streamline-pixel:coding-app-website-ui", description: "Developing fast, engaging, and conversion-focused landing pages for brands and businesses." },
+   { id: 2, title: "Responsive Design", icon: "icomoon-free:mobile", description: "Creating websites optimized for desktop, tablet, and mobile for the best user experience." },
+   { id: 3, title: "Landing Page", icon: "streamline-pixel:coding-app-website-ui", description: "Developing fast, engaging, and conversion-focused landing pages for brands and businesses." },
    { id: 4, title: "React Web Apps", icon: "mdi:react", description: "Building scalable and interactive web applications with reusable components and efficient architecture." },
-   { id: 5, title: "Figma to Code", icon: "streamline-pixel:ui-design-website", description: "Transforming Figma designs into clean, pixel-perfect, and fully responsive websites." },
-   { id: 6, title: "UI Implementation", icon: "fluent-mdl2:design", description: "Bringing user interface designs to life with clean code, smooth interactions, and modern layouts." },
+   { id: 5, title: "Figma to Code", icon: "lucide:figma", description: "Transforming Figma designs into clean, pixel-perfect, and fully responsive websites." },
+   { id: 6, title: "UI Implementation", icon: "meteor-icons:layout", description: "Bringing user interface designs to life with clean code, smooth interactions, and modern layouts." },
+]
+
+export const ProjectsInfo = [
+   { id: 1, img: p9, title: "Tech-Cloud", description: "A reluitment platform that connects companies and candidates", tech: ["React", "Tailwind CSS", "Redux"], demo_link: "/", github_link: "/" },
+   { id: 2, img: p10, title: "Tech-Cloud", description: "A reluitment platform that connects companies and candidates", tech: ["React", "Tailwind CSS", "Redux"], demo_link: "/", github_link: "/" },
+   { id: 3, img: p8, title: "Tech-Cloud", description: "A reluitment platform that connects companies and candidates", tech: ["React", "Tailwind CSS", "Redux"], demo_link: "/", github_link: "/" },
+   { id: 4, img: p2, title: "Tech-Cloud", description: "A reluitment platform that connects companies and candidates", tech: ["React", "Tailwind CSS", "Redux"], demo_link: "/", github_link: "/" },
+   { id: 5, img: p4, title: "Tech-Cloud", description: "A reluitment platform that connects companies and candidates", tech: ["React", "Tailwind CSS", "Redux"], demo_link: "/", github_link: "/" },
 ]
