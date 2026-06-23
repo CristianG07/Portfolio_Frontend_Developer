@@ -2,12 +2,12 @@
 
 @theme {
   --color-primary: #050816;
-  --color-secondary: #0B1120;
-  --color-blue-neon: #38BDF8;
-  --color-blue-bright: #0EA5E9;
-  --color-blue-electric: #60A5FA;
-  --color-text-secondary: #94A3B8;
-  --color-card: #0A0F1C05;
+  --color-secondary: #0b1120;
+  --color-blue-neon: #38bdf8;
+  --color-blue-bright: #0ea5e9;
+  --color-blue-electric: #60a5fa;
+  --color-text-secondary: #94a3b8;
+  --color-card: #0a0f1c05;
   --radius-card: 10px;
 }
 
@@ -16,26 +16,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   html {
+    overflow-x: hidden;
     scroll-behavior: smooth;
   }
 
   body {
     color: #ffffff;
     background: #030712;
-    overflow-x: hidden;
   }
 
   li {
     list-style: none;
   }
+
+  input,
+  textarea {
+    width: 100%;
+  }
 }
 
 @layer utilities {
-
   .glassmorphism {
     @apply border backdrop-blur-sm;
   }
@@ -44,7 +48,15 @@
     @apply bg-linear-to-r from-blue-neon via-blue-electric to-blue-bright bg-clip-text text-transparent;
   }
 
+  .subtitle {
+    @apply max-w-xl mx-auto text-pretty md:text-balance mt-4 text-gray-500;
+  }
+
   .content_section {
-    @apply max-w-7xl mx-auto pt-24 mb-20
+    @apply w-11/12 lg:w-10/12 max-w-7xl mx-auto pt-24 pb-20;
+  }
+
+  .inputContact {
+    @apply px-5 py-4 border border-blue-bright/40 placeholder:text-gray-400 outline-none rounded-card backdrop-blur-md transition-all duration-300 focus:border-blue-bright focus:shadow-[0_0_20px_rgba(0,170,255,0.25)] focus:bg-white/5 resize-none;
   }
 }
