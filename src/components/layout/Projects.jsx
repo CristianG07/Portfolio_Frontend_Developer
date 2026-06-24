@@ -6,7 +6,7 @@ import { ProjectsInfo } from "../../data";
 
 export default function Projects() {
   return (
-    <section className="w-2/4 content_section" id="projects">
+    <section className="content_section" id="projects">
       <div className="text-center mb-20">
         <Title text="Featured Projects" />
         <p className="subtitle">

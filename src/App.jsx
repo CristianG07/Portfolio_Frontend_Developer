@@ -12,8 +12,8 @@ import ClickSpark from "./components/reactbits/ClickSpark";
 function App() {
   return (
     <>
-      <Navbar />
       <ClickSpark sparkColor="#0EA5E9">
+        <Navbar />
         <main>
           <Hero />
           <About />

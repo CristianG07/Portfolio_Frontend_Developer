@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row flex-4 justify-between gap-3 text-gray-500">
-          <FooterLink title="Quick Links" data={Navlinks} />
+          <FooterLink title="Quick Links" className="" data={Navlinks} />
           <FooterLink title="Services" data={ServicesInfo} />
           <nav className="space-y-5">
             <h6 className="text-blue-bright text-xl font-bold">Contact Info</h6>

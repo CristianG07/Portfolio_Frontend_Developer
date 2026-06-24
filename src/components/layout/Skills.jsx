@@ -18,7 +18,10 @@ export default function Skills() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {SkillsInfo.map(({ id, IconComponent, title, description, skills }) => (
-          <GlareHover key={id}>
+          <GlareHover
+            key={id}
+            className="hover:scale-105 hover:-translate-y-0.5 transition-all duration-300"
+          >
             <CardSkill
               IconComponent={IconComponent}
               title={title}

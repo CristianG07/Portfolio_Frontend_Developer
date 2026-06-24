@@ -38,12 +38,12 @@ import BrowserCode from "../components/icons/BrowserCode";
 // components
 
 export const Navlinks = [
-  { id: 1, name: "Home", href: "#home" },
-  { id: 2, name: "About", href: "#about" },
-  { id: 3, name: "Services", href: "#services" },
-  { id: 4, name: "Projects", href: "#projects" },
-  { id: 5, name: "Skills", href: "#skills" },
-  { id: 6, name: "Contact", href: "#contact" },
+  { id: 1, name: "Home", href: "home" },
+  { id: 2, name: "About", href: "about" },
+  { id: 3, name: "Services", href: "services" },
+  { id: 4, name: "Projects", href: "projects" },
+  { id: 5, name: "Skills", href: "skills" },
+  { id: 6, name: "Contact", href: "contact" },
 ];
 
 export const SocialLinks = [
@@ -91,6 +91,7 @@ export const ServicesInfo = [
     IconComponent: BrowserCode,
     description:
       "Building modern, responsive, and high-performance web interfaces using React and Tailwind CSS.",
+    href: "services",
   },
   {
     id: 2,
@@ -98,6 +99,7 @@ export const ServicesInfo = [
     IconComponent: Mobile,
     description:
       "Creating websites optimized for desktop, tablet, and mobile for the best user experience.",
+    href: "services",
   },
   {
     id: 3,
@@ -105,6 +107,7 @@ export const ServicesInfo = [
     IconComponent: WebSite,
     description:
       "Developing fast, engaging, and conversion-focused landing pages for brands and businesses.",
+    href: "services",
   },
   {
     id: 4,
@@ -112,6 +115,7 @@ export const ServicesInfo = [
     IconComponent: ReactIcon,
     description:
       "Building scalable and interactive web applications with reusable components and efficient architecture.",
+    href: "services",
   },
   {
     id: 5,
@@ -119,6 +123,7 @@ export const ServicesInfo = [
     IconComponent: Figma,
     description:
       "Transforming Figma designs into clean, pixel-perfect, and fully responsive websites.",
+    href: "services",
   },
   {
     id: 6,
@@ -126,6 +131,7 @@ export const ServicesInfo = [
     IconComponent: Tools,
     description:
       "Bringing user interface designs to life with clean code, smooth interactions, and modern layouts.",
+    href: "services",
   },
 ];
 

@@ -20,13 +20,13 @@
   }
 
   html {
-    overflow-x: hidden;
     scroll-behavior: smooth;
   }
 
   body {
     color: #ffffff;
     background: #030712;
+    overflow-x: hidden;
   }
 
   li {

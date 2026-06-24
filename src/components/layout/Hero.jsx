@@ -60,10 +60,10 @@ export default function Hero() {
           </p>
 
           <div className="flex items-center gap-6">
-            <Button href="/" className="bg-blue-bright ">
+            <Button href="/" className="bg-blue-bright text-xs md:text-base">
               Hire Me <ArrowRightAnimate />
             </Button>
-            <Button href="/">
+            <Button href="/" className="text-xs md:text-base">
               View Projects <ArrowDownAnimate />
             </Button>
           </div>

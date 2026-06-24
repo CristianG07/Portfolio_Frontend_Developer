@@ -7,7 +7,7 @@ import GlareHover from "../reactbits/GlareHover";
 
 export default function Services() {
   return (
-    <section className="w-11/12 content_section text-center" id="services">
+    <section className="content_section text-center" id="services">
       <div className="mb-20 ">
         <Title text="My Services" />
         <p className="subtitle">
@@ -17,7 +17,10 @@ export default function Services() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {ServicesInfo.map(({ id, name, description, IconComponent }) => (
-          <GlareHover key={id}>
+          <GlareHover
+            key={id}
+            className="hover:scale-105 hover:-translate-y-0.5 transition-all duration-300"
+          >
             <CardService
               title={name}
               IconComponent={IconComponent}
