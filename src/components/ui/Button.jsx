@@ -7,7 +7,7 @@ export default function Button({
   return (
     <a
       href={href}
-      className={`flex items-center gap-3 text-base font-medium py-3 px-5 border rounded-card border-blue-neon hover:scale-110 hover:shadow shadow-blue-bright transition-all duration-300 ${className}`}
+      className={`flex items-center gap-3 text-base font-medium py-3 px-5 border rounded-card border-blue-neon  shadow-blue-bright transition-all duration-300 cursor-pointer ${className}`}
       download={download}
     >
       {children}

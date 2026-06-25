@@ -46,10 +46,11 @@ export default function About() {
           <div>
             <Button
               href="../../assets/image/coding.png"
-              className="w-fit"
+              className="w-fit relative text-xs overflow-hidden after:-translate-x-full md:text-base after:absolute after:inset-0 after:bg-white hover:after:translate-x-0 after:transition-all after:duration-300 hover:text-blue-bright after:-z-10 group"
               download={true}
             >
-              Download CV <Download className="w-5 text-xl" />
+              Download CV{" "}
+              <Download className="w-5 text-xl group-hover:translate-y-0.5 transition-all duration-300" />
             </Button>
           </div>
         </div>

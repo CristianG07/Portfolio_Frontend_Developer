@@ -60,11 +60,19 @@ export default function Hero() {
           </p>
 
           <div className="flex items-center gap-6">
-            <Button href="/" className="bg-blue-bright text-xs md:text-base">
-              Hire Me <ArrowRightAnimate />
+            <Button
+              href="#contact"
+              className="bg-blue-bright hover:bg-blue-bright/10 hover:border hover:border-blue-bright text-xs md:text-base group"
+            >
+              Hire Me{" "}
+              <ArrowRightAnimate className="group-hover:translate-x-0.5 transition-all duration-300" />
             </Button>
-            <Button href="/" className="text-xs md:text-base">
-              View Projects <ArrowDownAnimate />
+            <Button
+              href="#projects"
+              className="relative text-xs overflow-hidden after:-translate-x-full md:text-base after:absolute after:inset-0 after:bg-white hover:after:translate-x-0 after:transition-all after:duration-300 hover:text-blue-bright after:-z-10 group"
+            >
+              View Projects{" "}
+              <ArrowDownAnimate className="group-hover:translate-y-0.5 transition-all duration-300" />
             </Button>
           </div>
           <div className="flex gap-5 w-fit">

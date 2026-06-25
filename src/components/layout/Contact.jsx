@@ -43,11 +43,11 @@ export default function Contact() {
             Let’s turn your ideas into modern and responsive web experiences.
           </p>
           <div className="flex gap-5">
-            <Button className="bg-green-600 border-none">
+            <Button className="bg-green-600 hover:scale-105 border-none">
               <Whatsapp className="text-2xl" />
               WhatsApp
             </Button>
-            <Button>
+            <Button className="relative text-xs overflow-hidden after:-translate-x-full md:text-base after:absolute after:inset-0 after:bg-white hover:after:translate-x-0 after:transition-all after:duration-300 hover:text-blue-bright after:-z-10">
               Email
               <Email className="text-2xl" />
             </Button>
@@ -69,7 +69,7 @@ export default function Contact() {
           <div className="w-fit mx-auto">
             <button
               type="submit"
-              className="flex items-center gap-2 px-14 py-4 rounded-xl bg-blue-bright font-semibold"
+              className="flex items-center gap-2 px-14 py-4 rounded-xl bg-blue-bright font-semibold hover:bg-blue-bright/20 border border-blue-bright text-xs md:text-base transition-all duration-300 cursor-pointer group"
             >
               Send Message
               <Sent className="text-2xl" />

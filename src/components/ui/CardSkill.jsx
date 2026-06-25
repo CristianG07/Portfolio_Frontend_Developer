@@ -8,13 +8,13 @@ export default function CardSkill({
   skills,
 }) {
   return (
-    <div className="bg-card space-y-6 p-8 rounded-card border border-blue-bright shadow shadow-blue-bright select-none">
-      <div className="flex flex-col md:flex-row items-center text-center md:text-start gap-5">
+    <div className="bg-card space-y-6 p-5 md:p-8 rounded-card border border-blue-bright shadow shadow-blue-bright select-none">
+      <div className="flex flex-row items-center gap-5">
         <BubbleIcon IconComponent={IconComponent} />
         <div className="space-y-3">
           <div className="space-y-1.5">
             <h4 className="text-xl">{title}</h4>
-            <div className="h-1.5 w-20 rounded-full bg-blue-bright mx-auto md:mx-0" />
+            <div className="h-1.5 w-20 rounded-full bg-blue-bright" />
           </div>
           <p className="text-gray-500 text-xs md:text-base text-balance">
             {description}
@@ -25,7 +25,7 @@ export default function CardSkill({
         {skills.map(({ id, IconComponent, name }) => (
           <div
             key={id}
-            className="flex items-center gap-2 px-5 py-2 border border-blue-bright rounded-card"
+            className="flex items-center gap-2 px-5 py-2 border border-blue-bright rounded-card hover:scale-105 transition-all duration-300"
           >
             <div className="flex md:text-3xl">
               <IconComponent />
