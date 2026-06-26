@@ -1,27 +1,24 @@
 import { useEffect, useState } from "react";
 
 export default function useActiveSection() {
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.3,
-      },
-    );
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
 
-    sections.forEach((section) => observer.observe(section));
+        if (rect.top <= 150 && rect.bottom >= 150) {
+          setActiveSection(section.id);
+        }
+      });
+    };
 
-    return () => observer.disconnect();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return activeSection;

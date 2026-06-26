@@ -14,7 +14,7 @@ export default function CardProject({
   github_link,
 }) {
   return (
-    <ElectricBorder className="shadow shadow-blue-bright select-none hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 ">
+    <ElectricBorder className="shadow h-full shadow-blue-bright select-none hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 ">
       <GlareHover>
         <div className="space-y-3 border border-blue-bright bg-card p-6 rounded-card">
           <figure className="rounded-card h-56 overflow-hidden">

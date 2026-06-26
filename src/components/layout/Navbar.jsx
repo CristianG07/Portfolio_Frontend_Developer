@@ -10,14 +10,18 @@ import Logo from "../ui/Logo";
 import useActiveSection from "../../data/hooks/useActiveSection";
 import NavbarMobile from "./NavbarMobile";
 import Button from "../ui/Button";
+import AnimatedContent from "../reactbits/AnimatedContent";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const activeSection = useActiveSection();
 
   return (
-    <header className="fixed h-fit w-[93%] md:w-11/12 max-w-7xl top-5 inset-0 mx-auto z-50">
-      <section className="flex justify-between items-center py-4 px-8 rounded-xl glassmorphism border-blue-bright">
+    <header className="fixed h-fit w-[93%] md:w-11/12 max-w-7xl top-3.5 inset-0 mx-auto z-40">
+      {/* <AnimatedContent reverse> */}
+      <section
+        className={`flex justify-between items-center py-4 px-8 rounded-xl border backdrop-blur-sm border-blue-bright`}
+      >
         <Logo />
         <nav>
           <ul className="hidden lg:flex gap-12">
@@ -37,7 +41,7 @@ export default function Navbar() {
         </nav>
         <Button
           href="#contact"
-          className="hidden lg:flex items-center gap-2 border border-blue-bright px-4 py-2 rounded-card cursor-pointer hover:scale-105 hover:shadow hover:shadow-blue-bright transition-all duration-300"
+          className="hidden lg:flex items-center gap-2 border border-blue-bright px-4 py-2 rounded-card cursor-pointer hover:scale-105 hover:shadow hover:shadow-blue-bright transition-all duration-500"
         >
           <Sent className="text-blue-neon" />
           <span>Hire Me</span>
@@ -49,6 +53,13 @@ export default function Navbar() {
           {isMenuOpen ? <Close /> : <Bar />}
         </button>
       </section>
+      {/* </AnimatedContent> */}
+      {isMenuOpen && (
+        <NavbarMobile
+          activeSection={activeSection}
+          setIsMenuOpen={setIsMenuOpen}
+        />
+      )}
     </header>
   );
 }

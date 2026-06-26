@@ -40,10 +40,6 @@
 }
 
 @layer utilities {
-  .glassmorphism {
-    @apply border backdrop-blur-sm;
-  }
-
   .gradiant_text {
     @apply bg-linear-to-r from-blue-neon via-blue-electric to-blue-bright bg-clip-text text-transparent;
   }
