@@ -88,8 +88,8 @@ export default function Hero() {
           </div>
           <div className="flex gap-5 w-fit">
             {SocialLinks.map(({ id, IconComponent, href }) => (
-              <AnimatedContent delay={0.4 * id}>
-                <a href={href} key={id} target="_blank">
+              <AnimatedContent key={id} delay={0.4 * id}>
+                <a href={href} target="_blank">
                   <BubbleSocial IconComponent={IconComponent} />
                 </a>
               </AnimatedContent>

@@ -17,9 +17,9 @@ export function SqlDatabase(props) {
           fy="10.57"
           gradientTransform="matrix(73.03125 0 0 37.1875 29.797 56.535)"
         >
-          <stop offset="0" stop-color="#f2f2f2" />
-          <stop offset=".58" stop-color="#eee" />
-          <stop offset="1" stop-color="#e6e6e6" />
+          <stop offset="0" stopColor="#f2f2f2" />
+          <stop offset=".58" stopColor="#eee" />
+          <stop offset="1" stopColor="#e6e6e6" />
         </radialGradient>
         <linearGradient
           id="IconifyId19edb7271119768a21"
@@ -30,13 +30,13 @@ export function SqlDatabase(props) {
           gradientTransform="scale(7.11111)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#005ba1" />
-          <stop offset=".07" stop-color="#0060a9" />
-          <stop offset=".36" stop-color="#0071c8" />
-          <stop offset=".52" stop-color="#0078d4" />
-          <stop offset=".64" stop-color="#0074cd" />
-          <stop offset=".82" stop-color="#006abb" />
-          <stop offset="1" stop-color="#005ba1" />
+          <stop offset="0" stopColor="#005ba1" />
+          <stop offset=".07" stopColor="#0060a9" />
+          <stop offset=".36" stopColor="#0071c8" />
+          <stop offset=".52" stopColor="#0078d4" />
+          <stop offset=".64" stopColor="#0074cd" />
+          <stop offset=".82" stopColor="#006abb" />
+          <stop offset="1" stopColor="#005ba1" />
         </linearGradient>
       </defs>
       <path

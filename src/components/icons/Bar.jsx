@@ -9,7 +9,7 @@ export function Bar(props) {
     >
       <path
         fill="currentColor"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M3 16h18v2H3zm0-5h18v2H3zm0-5h18v2H3z"
       />
     </svg>
