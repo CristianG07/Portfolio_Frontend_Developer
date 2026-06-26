@@ -7,7 +7,6 @@ import { Figma } from "../components/icons/Figma";
 import { FigmaColor } from "../components/icons/FigmaColor";
 import { Firebase } from "../components/icons/Firebase";
 import Fiverr from "../components/icons/Fiverr";
-import { FramerMotion } from "../components/icons/Framermotion";
 import { Git } from "../components/icons/Git";
 import Github from "../components/icons/Github";
 import { Html5 } from "../components/icons/Html5";
@@ -245,7 +244,7 @@ export const SkillsInfo = [
     skills: [
       { id: 1, IconComponent: Typescript, name: "TypeScript" },
       { id: 2, IconComponent: Nextjs, name: "Next.js" },
-      { id: 3, IconComponent: FramerMotion, name: "Framer Motion" },
+      // { id: 3, IconComponent: FramerMotion, name: "Framer Motion" },
       { id: 4, IconComponent: SqlDatabase, name: "SQL" },
       { id: 5, IconComponent: Prisma, name: "Prisma" },
     ],
