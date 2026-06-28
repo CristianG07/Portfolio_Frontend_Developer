@@ -14,7 +14,7 @@ export default function CardProject({
   github_link,
 }) {
   return (
-    <ElectricBorder className="shadow h-full shadow-blue-bright select-none hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 ">
+    <ElectricBorder className="shadow h-full shadow-blue-bright select-none">
       <GlareHover>
         <div className="space-y-3 border border-blue-bright bg-card p-6 rounded-card">
           <figure className="rounded-card h-56 overflow-hidden">
@@ -39,14 +39,11 @@ export default function CardProject({
             ))}
           </div>
           <div className="grid grid-cols-2 gap-5 mt-5">
-            <Button href={demo_link} className="justify-center hover:scale-105">
+            <Button href={demo_link} className="justify-center">
               Demo
               <OpenLink className="text-base md:text-xl" />
             </Button>
-            <Button
-              href={github_link}
-              className="justify-center hover:scale-105"
-            >
+            <Button href={github_link} className="justify-center">
               Github
               <Github className="text-base md:text-xl" />
             </Button>

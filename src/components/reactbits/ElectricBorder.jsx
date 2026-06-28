@@ -1,4 +1,5 @@
 import { useEffect, useRef, useCallback } from "react";
+import { motion } from "motion/react";
 
 function hexToRgba(hex, alpha = 1) {
   if (!hex) return `rgba(0,0,0,${alpha})`;
@@ -339,7 +340,10 @@ const ElectricBorder = ({
   }, [color, speed, chaos, borderRadius, octavedNoise, getRoundedRectPoint]);
 
   return (
-    <div
+    <motion.div
+      whileHover={{ scale: 1.1, transition: { duration: 0.25 } }}
+      whileTap={{ scale: 1.05 }}
+      transition={{ duration: 0.25 }}
       ref={containerRef}
       className={`relative isolate ${className ?? ""}`}
       style={{ "--electric-border-color": color, borderRadius, ...style }}
@@ -368,7 +372,7 @@ const ElectricBorder = ({
         />
       </div>
       <div className="relative rounded-[inherit] z-[1]">{children}</div>
-    </div>
+    </motion.div>
   );
 };
 

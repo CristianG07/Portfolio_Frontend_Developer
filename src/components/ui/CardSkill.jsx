@@ -1,5 +1,6 @@
 import { Icon } from "@iconify-icon/react";
 import BubbleIcon from "./BubbleIcon";
+import { motion } from "motion/react";
 
 export default function CardSkill({
   IconComponent,
@@ -23,15 +24,18 @@ export default function CardSkill({
       </div>
       <div className="flex flex-wrap gap-2 md:gap-4">
         {skills.map(({ id, IconComponent, name }) => (
-          <div
+          <motion.div
+            whileHover={{ scale: 1.1, transition: { duration: 0.25 } }}
+            whileTap={{ scale: 1.05 }}
+            transition={{ duration: 0.25 }}
             key={id}
-            className="flex items-center gap-2 px-5 py-2 border border-blue-bright rounded-card hover:scale-105 transition-all duration-300"
+            className="flex items-center gap-2 px-5 py-2 border border-blue-bright rounded-card"
           >
             <div className="flex md:text-3xl">
               <IconComponent />
             </div>
             <span>{name}</span>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
