@@ -341,8 +341,7 @@ const ElectricBorder = ({
 
   return (
     <motion.div
-      whileHover={{ scale: 1.1, transition: { duration: 0.25 } }}
-      whileTap={{ scale: 1.05 }}
+      whileHover={{ scale: 1.03, transition: { duration: 0.25 } }}
       transition={{ duration: 0.25 }}
       ref={containerRef}
       className={`relative isolate ${className ?? ""}`}

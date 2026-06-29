@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 // data
 import { SocialLinks } from "../../data";
 // icons
@@ -12,6 +13,7 @@ import TextType from "../reactbits/TextType";
 import BubbleSocial from "../ui/BubbleSocial";
 import Button from "../ui/Button";
 import DotPing from "../ui/DotPing";
+import fadeIn from "../../animations/Animations";
 
 export default function Hero() {
   return (
@@ -33,11 +35,21 @@ export default function Hero() {
         </div>
 
         <div className="relative space-y-6 z-10 select-none">
-          <div className="flex gap-1.5 items-center text-xs md:text-base w-fit py-2 px-4 rounded-full border-blue-bright shadow shadow-blue-bright ">
+          <motion.div
+            initial="hidden"
+            variants={fadeIn("up", 0.2)}
+            whileInView={"show"}
+            className="flex gap-1.5 items-center text-xs md:text-base w-fit py-2 px-4 rounded-full border-blue-bright shadow shadow-blue-bright "
+          >
             <DotPing />
             <ShinyText text="FRONTEND DEVELOPER" className="font-bold" />
-          </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight ">
+          </motion.div>
+          <motion.h1
+            initial="hidden"
+            variants={fadeIn("up", 0.4)}
+            whileInView={"show"}
+            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight "
+          >
             Hello Everyone!,
             <br />
             I'm{" "}
@@ -51,34 +63,58 @@ export default function Hero() {
               typingSpeed={110}
               showCursor
             />
-          </h1>
-          <p className="w-full md:max-w-2xl md:text-balance lg:texpr">
+          </motion.h1>
+          <motion.p
+            initial="hidden"
+            variants={fadeIn("up", 0.6)}
+            whileInView={"show"}
+            className="w-full md:max-w-2xl md:text-balance lg:texpr"
+          >
             Building Modern Web Experiences. Frontend Developer specializing in
             React, Tailwind CSS and JavaScript. I create fast, responsive and
             user-focused websites that bring ideas and designs to life.
-          </p>
+          </motion.p>
 
           <div className="flex items-center gap-6">
-            <Button
-              href="#contact"
-              className="bg-blue-bright hover:bg-blue-bright/10 hover:border hover:border-blue-bright text-xs md:text-base group"
+            <motion.div
+              initial="hidden"
+              variants={fadeIn("up", 0.8)}
+              whileInView={"show"}
             >
-              Hire Me{" "}
-              <ArrowRightAnimate className="group-hover:translate-x-0.5 transition-all duration-300" />
-            </Button>
-            <Button
-              href="#projects"
-              className="relative text-xs overflow-hidden after:-translate-x-full md:text-base after:absolute after:inset-0 after:bg-white hover:after:translate-x-0 after:transition-all after:duration-300 hover:text-blue-bright after:-z-10 backdrop-blur-sm group"
+              <Button
+                href="#contact"
+                className="bg-blue-bright hover:bg-blue-bright/10 border hover:text-blue-bright border-blue-bright text-xs md:text-base group"
+              >
+                Hire Me{" "}
+                <ArrowRightAnimate className="group-hover:translate-x-0.5 transition-all duration-300" />
+              </Button>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              variants={fadeIn("up", 1)}
+              whileInView={"show"}
             >
-              View Projects{" "}
-              <ArrowDownAnimate className="group-hover:translate-y-0.5 transition-all duration-300" />
-            </Button>
+              <Button
+                href="#projects"
+                className="relative text-xs overflow-hidden after:-translate-x-full md:text-base after:absolute after:inset-0 after:bg-white hover:after:translate-x-0 after:transition-all after:duration-300 hover:text-blue-bright after:-z-10 backdrop-blur-sm group"
+              >
+                View Projects{" "}
+                <ArrowDownAnimate className="group-hover:translate-y-0.5 transition-all duration-300" />
+              </Button>
+            </motion.div>
           </div>
           <div className="flex gap-5 w-fit">
             {SocialLinks.map(({ id, IconComponent, href }) => (
-              <a key={id} href={href} target="_blank">
+              <motion.a
+                initial="hidden"
+                variants={fadeIn("up", 0.4 * id)}
+                whileInView={"show"}
+                key={id}
+                href={href}
+                target="_blank"
+              >
                 <BubbleSocial IconComponent={IconComponent} />
-              </a>
+              </motion.a>
             ))}
           </div>
         </div>

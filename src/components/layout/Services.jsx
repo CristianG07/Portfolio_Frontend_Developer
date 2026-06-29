@@ -5,6 +5,7 @@ import Title from "../ui/Title";
 import CardService from "../ui/CardService";
 import GlareHover from "../reactbits/GlareHover";
 import { motion } from "motion/react";
+import fadeIn from "../../animations/Animations";
 
 export default function Services() {
   return (
@@ -12,19 +13,28 @@ export default function Services() {
       <div className="mb-16">
         <Title text="My Services" />
 
-        <p className="subtitle">
+        <motion.p
+          initial="hidden"
+          variants={fadeIn("up", 0.4)}
+          whileInView={"show"}
+          className="subtitle"
+        >
           Providing high-quality frontend solutions tailored to create fast,
           scalable, and engaging digital experiences.
-        </p>
+        </motion.p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {ServicesInfo.map(({ id, name, description, IconComponent }) => (
           <motion.div
-            whileHover={{ scale: 1.1, transition: { duration: 0.25 } }}
-            whileTap={{ scale: 1.05 }}
+            initial="hidden"
+            variants={fadeIn("up", 0.35 * id)}
+            whileInView={"show"}
+            whileHover={{ scale: 1.03, transition: { duration: 0.25 } }}
+            whileTap={{ scale: 1.01 }}
             transition={{ duration: 0.25 }}
+            key={id}
           >
-            <GlareHover key={id} className="h-full">
+            <GlareHover className="h-full">
               <CardService
                 title={name}
                 IconComponent={IconComponent}

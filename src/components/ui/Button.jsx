@@ -5,6 +5,7 @@ export default function Button({
   children,
   className,
   download = false,
+  target,
 }) {
   return (
     <motion.a
@@ -14,6 +15,7 @@ export default function Button({
       href={href}
       className={`flex items-center gap-3 text-base font-medium py-3 px-5 border rounded-card border-blue-neon  shadow-blue-bright cursor-pointer ${className}`}
       download={download}
+      target={target}
     >
       {children}
     </motion.a>

@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 // images
 import { nebulosa, nebulosaMobile } from "../../assets/image";
 // icons
@@ -8,6 +9,7 @@ import { Whatsapp } from "../icons/Whatsapp";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
 import Title from "../ui/Title";
+import fadeIn from "../../animations/Animations";
 
 export default function Contact() {
   return (
@@ -15,12 +17,17 @@ export default function Contact() {
       <div className="text-center mb-16">
         <Title text="Contact" />
 
-        <p className="subtitle">
+        <motion.p
+          initial="hidden"
+          variants={fadeIn("up", 0.4)}
+          whileInView={"show"}
+          className="subtitle"
+        >
           Let’s connect and bring your ideas to life through clean, modern, and
           impactful web solutions.
-        </p>
+        </motion.p>
       </div>
-      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-20 overflow-hidden rounded-card p-5 md:p-10">
+      <div className="relative grid grid-cols-1 gap-20 overflow-hidden rounded-card p-5 md:p-10">
         <div className="absolute inset-0 -z-10">
           <img
             src={nebulosa}
@@ -50,19 +57,27 @@ export default function Contact() {
           </p>
 
           <div className="flex gap-5">
-            <Button className="bg-green-600 hover:scale-105 border-none">
+            <Button
+              href="https://wa.me/573186806722?text=Hello%20Cristian,%20I%20saw%20your%20portfolio"
+              className="bg-green-600 hover:scale-105 border-none"
+              target="_blank"
+            >
               <Whatsapp className="text-2xl" />
               WhatsApp
             </Button>
 
-            <Button className="relative text-xs overflow-hidden after:-translate-x-full md:text-base after:absolute after:inset-0 after:bg-white hover:after:translate-x-0 after:transition-all after:duration-300 hover:text-blue-bright after:-z-10">
+            <Button
+              href="mailto:crisdev0723g@gmail.com?subject=Project Inquiry&body=Hello Cristian, I want to discuss a project with you."
+              className="relative text-xs overflow-hidden after:-translate-x-full md:text-base after:absolute after:inset-0 after:bg-white hover:after:translate-x-0 after:transition-all after:duration-300 hover:text-blue-bright after:-z-10"
+            >
               Email
               <Email className="text-2xl" />
             </Button>
           </div>
         </div>
 
-        <form action="" className="space-y-4">
+        {/* contact form */}
+        {/* <form action="" className="space-y-4">
           <div className="flex flex-col md:flex-row gap-4">
             <Input placeholder="Your Name" />
             <Input type="email" placeholder="Your Email" />
@@ -83,7 +98,7 @@ export default function Contact() {
               <Sent className="text-2xl" />
             </button>
           </div>
-        </form>
+        </form> */}
       </div>
     </section>
   );

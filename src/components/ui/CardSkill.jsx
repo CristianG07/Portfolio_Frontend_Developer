@@ -25,7 +25,7 @@ export default function CardSkill({
       <div className="flex flex-wrap gap-2 md:gap-4">
         {skills.map(({ id, IconComponent, name }) => (
           <motion.div
-            whileHover={{ scale: 1.1, transition: { duration: 0.25 } }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.25 } }}
             whileTap={{ scale: 1.05 }}
             transition={{ duration: 0.25 }}
             key={id}

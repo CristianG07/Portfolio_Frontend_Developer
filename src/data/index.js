@@ -32,7 +32,7 @@ import { Vitejs } from "../components/icons/Vitejs";
 import { Vscode } from "../components/icons/Vscode";
 import WebSite from "../components/icons/WebSite";
 // projects images
-import { p1, p10, p2, p3, p4, p5, p6, p7, p8, p9 } from "../assets/projects";
+import { p1, p2, p3, p4, p5 } from "../assets/projects";
 import BrowserCode from "../components/icons/BrowserCode";
 // components
 
@@ -137,48 +137,34 @@ export const ServicesInfo = [
 export const ProjectsInfo = [
   {
     id: 1,
-    img: p9,
-    title: "Tech-Cloud",
-    description: "A reluitment platform that connects companies and candidates",
+    img: p1,
+    title: "Tech Cloud",
+    description:
+      "Built a responsive e-commerce UI focused on product browsing, categories, wishlist system, and optimized shopping experience.",
     tech: ["React", "Tailwind CSS", "Redux"],
-    demo_link: "/",
-    github_link: "/",
+    demo_link: "https://tech-cloud-frontend.vercel.app",
+    github_link: "https://github.com/CristianG07/tech-cloud-FrontEnd",
   },
   {
     id: 2,
-    img: p10,
-    title: "Tech-Cloud",
-    description: "A reluitment platform that connects companies and candidates",
+    img: p2,
+    title: "Job Finder Platform",
+    description:
+      "Developed a job search platform with advanced filtering and clean UI for better job discovery experience.",
     tech: ["React", "Tailwind CSS", "Redux"],
-    demo_link: "/",
-    github_link: "/",
+    demo_link: "https://vacancies-front-end.vercel.app",
+    github_link: "https://github.com/CristianG07/Vacancies-FrontEnd",
   },
   {
     id: 3,
-    img: p8,
-    title: "Tech-Cloud",
-    description: "A reluitment platform that connects companies and candidates",
+    img: p3,
+    title: "Coursean",
+    description:
+      "Created an education platform interface focused on course browsing, categories, and promotional sections.",
     tech: ["React", "Tailwind CSS", "Redux"],
-    demo_link: "/",
-    github_link: "/",
-  },
-  {
-    id: 4,
-    img: p2,
-    title: "Tech-Cloud",
-    description: "A reluitment platform that connects companies and candidates",
-    tech: ["React", "Tailwind CSS", "Redux"],
-    demo_link: "/",
-    github_link: "/",
-  },
-  {
-    id: 5,
-    img: p4,
-    title: "Tech-Cloud",
-    description: "A reluitment platform that connects companies and candidates",
-    tech: ["React", "Tailwind CSS", "Redux"],
-    demo_link: "/",
-    github_link: "/",
+    demo_link: "https://coursean.vercel.app",
+    github_link:
+      "https://github.com/CristianG07/Coursean-Curses-Online-FrontEnd",
   },
 ];
 

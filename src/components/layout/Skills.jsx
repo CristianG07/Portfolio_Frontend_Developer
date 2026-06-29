@@ -6,25 +6,35 @@ import Title from "../ui/Title";
 import CardSkill from "../ui/CardSkill";
 import GlareHover from "../reactbits/GlareHover";
 import { motion } from "motion/react";
+import fadeIn from "../../animations/Animations";
 
 export default function Skills() {
   return (
     <section className="w-11/12 content_section" id="skills">
       <div className="text-center mb-16">
         <Title text="My Skills" />
-        <p className="subtitle">
+        <motion.p
+          initial="hidden"
+          variants={fadeIn("up", 0.4)}
+          whileInView={"show"}
+          className="subtitle"
+        >
           Technologies and tools I use to build modern, scalable, and
           high-performance web applications.
-        </p>
+        </motion.p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {SkillsInfo.map(({ id, IconComponent, title, description, skills }) => (
           <motion.div
-            whileHover={{ scale: 1.05, transition: { duration: 0.25 } }}
-            whileTap={{ scale: 1.05 }}
+            initial="hidden"
+            variants={fadeIn("up", 0.3 * id)}
+            whileInView={"show"}
+            whileHover={{ scale: 1.03, transition: { duration: 0.25 } }}
+            whileTap={{ scale: 1.03 }}
             transition={{ duration: 0.25 }}
+            key={id}
           >
-            <GlareHover key={id}>
+            <GlareHover>
               <CardSkill
                 IconComponent={IconComponent}
                 title={title}

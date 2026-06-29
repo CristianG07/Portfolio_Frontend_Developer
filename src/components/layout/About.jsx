@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+// icons
 import { Icon } from "@iconify-icon/react";
 import Download from "../icons/Download";
 // image
@@ -9,6 +11,7 @@ import Title from "../ui/Title";
 import ShinyText from "../reactbits/ShinyText";
 import Button from "../ui/Button";
 import TextIcons from "../ui/TextIcons";
+import fadeIn from "../../animations/Animations";
 
 export default function About() {
   return (
@@ -16,10 +19,15 @@ export default function About() {
       <div className="flex flex-col items-center gap-1 text-center mb-16">
         <Title text="About Me" />
 
-        <p className="subtitle">
+        <motion.p
+          initial="hidden"
+          variants={fadeIn("up", 0.4)}
+          whileInView={"show"}
+          className="subtitle"
+        >
           Passionate about building modern, responsive, and user-focused web
           experiences with clean code and creative solutions.
-        </p>
+        </motion.p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-5 lg:gap-10">
         <figure className="border border-blue-bright rounded-card shadow shadow-blue-bright overflow-hidden">

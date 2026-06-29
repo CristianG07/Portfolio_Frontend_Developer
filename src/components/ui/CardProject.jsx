@@ -14,9 +14,9 @@ export default function CardProject({
   github_link,
 }) {
   return (
-    <ElectricBorder className="shadow h-full shadow-blue-bright select-none">
+    <ElectricBorder className="shadow grid shadow-blue-bright select-none">
       <GlareHover>
-        <div className="space-y-3 border border-blue-bright bg-card p-6 rounded-card">
+        <div className="grid space-y-3 border border-blue-bright bg-card p-6 rounded-card">
           <figure className="rounded-card h-56 overflow-hidden">
             <img
               src={img}
@@ -28,7 +28,7 @@ export default function CardProject({
           <p className="text-base md:text-xs lg:text-base text-gray-500">
             {description}
           </p>
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
             {tech.map((tech) => (
               <span
                 key={tech}
@@ -39,11 +39,15 @@ export default function CardProject({
             ))}
           </div>
           <div className="grid grid-cols-2 gap-5 mt-5">
-            <Button href={demo_link} className="justify-center">
+            <Button href={demo_link} className="justify-center" target="_blank">
               Demo
               <OpenLink className="text-base md:text-xl" />
             </Button>
-            <Button href={github_link} className="justify-center">
+            <Button
+              href={github_link}
+              className="justify-center"
+              target="_blank"
+            >
               Github
               <Github className="text-base md:text-xl" />
             </Button>

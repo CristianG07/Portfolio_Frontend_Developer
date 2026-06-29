@@ -66,7 +66,7 @@ const GlareHover = ({
 
   return (
     <div
-      className={`relative grid overflow-hidden cursor-pointer ${className}`}
+      className={`relative h-full grid overflow-hidden cursor-pointer ${className}`}
       style={{
         borderRadius,
         ...style,
