@@ -70,7 +70,7 @@ export default function About() {
             {AboutSkills.map(({ id, text, IconComponent }) => (
               <motion.div
                 initial="hidden"
-                variants={fadeIn("up", 0.6 * id, 0.9)}
+                variants={fadeIn("up", id * 0.3)}
                 whileInView={"show"}
                 key={id}
               >
@@ -81,7 +81,7 @@ export default function About() {
 
           <motion.div
             initial="hidden"
-            variants={fadeIn("up", 0.9)}
+            variants={fadeIn("up", 0.5)}
             whileInView={"show"}
           >
             <Button

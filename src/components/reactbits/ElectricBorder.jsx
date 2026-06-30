@@ -212,7 +212,7 @@ const ElectricBorder = ({
     const amplitude = chaos;
     const frequency = 10;
     const baseFlatness = 0;
-    const displacement = 50;
+    const displacement = 40;
     const borderOffset = 10;
 
     const updateSize = () => {
@@ -284,7 +284,7 @@ const ElectricBorder = ({
         );
 
         const xNoise = octavedNoise(
-          progress * 8,
+          progress * 7,
           octaves,
           lacunarity,
           gain,
@@ -295,7 +295,7 @@ const ElectricBorder = ({
           baseFlatness,
         );
         const yNoise = octavedNoise(
-          progress * 8,
+          progress * 7,
           octaves,
           lacunarity,
           gain,
@@ -354,18 +354,18 @@ const ElectricBorder = ({
         <div
           className="absolute inset-0 rounded-[inherit] pointer-events-none"
           style={{
-            border: `2px solid ${hexToRgba(color, 0.6)}`,
-            filter: "blur(1px)",
+            border: `1px solid ${hexToRgba(color, 0.4)}`,
+            filter: "blur(0.5px)",
           }}
         />
         <div
           className="absolute inset-0 rounded-[inherit] pointer-events-none"
-          style={{ border: `2px solid ${color}`, filter: "blur(4px)" }}
+          style={{ border: `1px solid ${color}`, filter: "blur(2px)" }}
         />
         <div
-          className="absolute inset-0 rounded-[inherit] pointer-events-none -z-[1] scale-110 opacity-30"
+          className="absolute inset-0 rounded-[inherit] pointer-events-none -z-[1] scale-105 opacity-15"
           style={{
-            filter: "blur(32px)",
+            filter: "blur(12px)",
             background: `linear-gradient(-30deg, ${color}, transparent, ${color})`,
           }}
         />

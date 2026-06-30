@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <header className="fixed h-fit w-[93%] md:w-11/12 max-w-7xl top-3.5 inset-0 mx-auto z-40">
       <section
-        className={`flex justify-between items-center py-4 px-8 rounded-xl border backdrop-blur-sm border-blue-bright`}
+        className={`flex justify-between items-center py-4 px-8 rounded-xl border bg-black/40 backdrop-blur-sm border-blue-bright`}
       >
         <Logo />
         <nav>

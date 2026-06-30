@@ -1,5 +1,5 @@
-export { default as heroImg } from "./planet.png";
-export { default as heroMobileImg } from "./planet_mobile.png";
-export { default as coding } from "./coding.png";
-export { default as nebulosa } from "./galaxy.png";
-export { default as nebulosaMobile } from "./galaxyMobile.png";
+export { default as heroImg } from "./planet.avif";
+export { default as heroMobileImg } from "./planet_mobile.avif";
+export { default as coding } from "./coding.avif";
+export { default as nebulosa } from "./galaxy.avif";
+export { default as nebulosaMobile } from "./galaxyMobile.avif";

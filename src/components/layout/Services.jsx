@@ -27,7 +27,7 @@ export default function Services() {
         {ServicesInfo.map(({ id, name, description, IconComponent }) => (
           <motion.div
             initial="hidden"
-            variants={fadeIn("up", 0.35 * id, 0.9)}
+            variants={fadeIn("up", id * 0.15, 0.9)}
             whileInView={"show"}
             whileHover={{ scale: 1.03, transition: { duration: 0.25 } }}
             whileTap={{ scale: 1.01 }}

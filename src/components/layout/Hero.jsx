@@ -107,7 +107,7 @@ export default function Hero() {
             {SocialLinks.map(({ id, IconComponent, href }) => (
               <motion.a
                 initial="hidden"
-                variants={fadeIn("up", 0.4 * id)}
+                variants={fadeIn("up", id * 0.25)}
                 whileInView={"show"}
                 key={id}
                 href={href}

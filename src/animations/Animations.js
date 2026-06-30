@@ -15,7 +15,7 @@ export default function fadeIn(direction, delay, duration = 1) {
         type: "spring",
         duration: duration,
         delay: delay,
-        ease: [0.25, 0.25, 0.25, 0.75],
+        ease: "easeOut",
       },
     },
   };

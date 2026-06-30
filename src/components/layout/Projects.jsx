@@ -28,7 +28,7 @@ export default function Projects() {
             ({ id, img, title, description, tech, demo_link, github_link }) => (
               <motion.div
                 initial="hidden"
-                variants={fadeIn("up", 0.3 * id, 0.9)}
+                variants={fadeIn("up", id * 0.15, 0.9)}
                 whileInView={"show"}
                 className="grid"
               >
