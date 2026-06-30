@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function fadeIn(direction, delay) {
+export default function fadeIn(direction, delay, duration = 1) {
   return {
     hidden: {
       y: direction === "up" ? 20 : direction === "down" ? -20 : 0,
@@ -13,7 +13,7 @@ export default function fadeIn(direction, delay) {
       opacity: 1,
       transition: {
         type: "spring",
-        duration: 1,
+        duration: duration,
         delay: delay,
         ease: [0.25, 0.25, 0.25, 0.75],
       },

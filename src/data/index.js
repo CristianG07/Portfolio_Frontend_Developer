@@ -140,7 +140,7 @@ export const ProjectsInfo = [
     img: p1,
     title: "Tech Cloud",
     description:
-      "Built a responsive e-commerce UI focused on product browsing, categories, wishlist system, and optimized shopping experience.",
+      "Built a responsive e-commerce platform with product browsing, category filters, wishlist system, and optimized shopping experience.",
     tech: ["React", "Tailwind CSS", "Redux"],
     demo_link: "https://tech-cloud-frontend.vercel.app",
     github_link: "https://github.com/CristianG07/tech-cloud-FrontEnd",

@@ -9,7 +9,7 @@ export default function NavbarMobile({ activeSection, setIsMenuOpen }) {
             <a
               onClick={() => setIsMenuOpen(false)}
               href={`#${link.href}`}
-              className={`relative pb-1.5 after:absolute after:w-0 after:h-0.5 after:bg-blue-bright after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:rounded-full after:transition-all after:duration-300
+              className={`relative pb-1 after:absolute after:w-0 after:h-0.5 after:bg-blue-bright after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:rounded-full after:transition-all after:duration-300
                ${activeSection === link.href ? "after:w-full" : ""}
                `}
             >

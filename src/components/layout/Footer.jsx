@@ -9,7 +9,7 @@ import DotPing from "../ui/DotPing";
 
 export default function Footer() {
   return (
-    <footer className="w-5/6 content_section">
+    <footer className="w-5/6 lg:w-10/12 max-w-7xl mx-auto pt-24">
       <section className="flex flex-col lg:flex-row gap-10 lg:gap-0">
         <div className="lg:flex-2 space-y-5">
           <div>

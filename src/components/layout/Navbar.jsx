@@ -27,7 +27,7 @@ export default function Navbar() {
               <li key={link.id}>
                 <a
                   href={`#${link.href}`}
-                  className={`relative pb-1.5 after:absolute after:w-0 after:h-0.5 after:bg-blue-bright after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:rounded-full after:transition-all after:duration-300
+                  className={`relative pb-1 hover:text-blue-bright transition-colors duration-300| after:absolute after:w-0 after:h-0.5 after:bg-blue-bright after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:rounded-full after:transition-all after:duration-300
                     ${activeSection === link.href ? "after:w-full" : ""}
                   `}
                 >

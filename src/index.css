@@ -45,11 +45,11 @@
   }
 
   .subtitle {
-    @apply max-w-xl mx-auto text-pretty md:text-balance mt-4 text-gray-500;
+    @apply max-w-xl mx-auto text-pretty md:text-balance mt-2 text-gray-500;
   }
 
   .content_section {
-    @apply w-11/12 lg:w-10/12 max-w-7xl mx-auto pt-24 pb-20;
+    @apply w-11/12 lg:w-10/12 max-w-7xl mx-auto pt-24 pb-10;
   }
 
   .inputContact {

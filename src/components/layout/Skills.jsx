@@ -27,7 +27,7 @@ export default function Skills() {
         {SkillsInfo.map(({ id, IconComponent, title, description, skills }) => (
           <motion.div
             initial="hidden"
-            variants={fadeIn("up", 0.3 * id)}
+            variants={fadeIn("up", 0.3 * id, 0.9)}
             whileInView={"show"}
             whileHover={{ scale: 1.03, transition: { duration: 0.25 } }}
             whileTap={{ scale: 1.03 }}
@@ -46,7 +46,12 @@ export default function Skills() {
         ))}
       </div>
 
-      <div className="text-center mt-14 max-w-fit mx-auto space-y-2.5">
+      <motion.div
+        initial="hidden"
+        variants={fadeIn("up", 0.9)}
+        whileInView={"show"}
+        className="text-center mt-14 max-w-fit mx-auto space-y-2.5"
+      >
         <div className="flex flex-col md:flex-row items-center gap-2">
           <Code className="text-2xl text-blue-bright" />
           <span className="inline-block">
@@ -54,7 +59,7 @@ export default function Skills() {
           </span>
         </div>
         <div className="h-px bg-linear-to-r from-transparent via-blue-bright/70 to-transparent" />
-      </div>
+      </motion.div>
     </section>
   );
 }
